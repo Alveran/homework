@@ -64,10 +64,10 @@
 <line x1="0" y1="525" x2="800" y2="525" stroke="lightgrey" stroke-width="1" />
 <line x1="0" y1="550" x2="800" y2="550" stroke="lightgrey" stroke-width="1" />
 <line x1="0" y1="575" x2="800" y2="575" stroke="lightgrey" stroke-width="1" />
-<line x1="400" y1="300" x2="400" y2="0" stroke="black" stroke-width="1" />
-<line x1="400" y1="300" x2="400" y2="600" stroke="black" stroke-width="1" />
-<line x1="400" y1="300" x2="100" y2="300" stroke="black" stroke-width="1" />
-<line x1="400" y1="300" x2="700" y2="300" stroke="black" stroke-width="1" />
+<line x1="400" y1="300" x2="400" y2="75" stroke="black" stroke-width="1" />
+<line x1="400" y1="300" x2="400" y2="525" stroke="black" stroke-width="1" />
+<line x1="400" y1="300" x2="175" y2="300" stroke="black" stroke-width="1" />
+<line x1="400" y1="300" x2="625" y2="300" stroke="black" stroke-width="1" />
 <text x="422" y="312" fill="black" font-size="12"  transform="">1</text>
 <text x="447" y="312" fill="black" font-size="12"  transform="">2</text>
 <text x="472" y="312" fill="black" font-size="12"  transform="">3</text>
@@ -77,9 +77,6 @@
 <text x="572" y="312" fill="black" font-size="12"  transform="">7</text>
 <text x="597" y="312" fill="black" font-size="12"  transform="">8</text>
 <text x="622" y="312" fill="black" font-size="12"  transform="">9</text>
-<text x="647" y="312" fill="black" font-size="12"  transform="">10</text>
-<text x="672" y="312" fill="black" font-size="12"  transform="">11</text>
-<text x="697" y="312" fill="black" font-size="12"  transform="">12</text>
 <text x="371" y="312" fill="black" font-size="12"  transform="">-1</text>
 <text x="346" y="312" fill="black" font-size="12"  transform="">-2</text>
 <text x="321" y="312" fill="black" font-size="12"  transform="">-3</text>
@@ -89,9 +86,6 @@
 <text x="221" y="312" fill="black" font-size="12"  transform="">-7</text>
 <text x="196" y="312" fill="black" font-size="12"  transform="">-8</text>
 <text x="171" y="312" fill="black" font-size="12"  transform="">-9</text>
-<text x="146" y="312" fill="black" font-size="12"  transform="">-10</text>
-<text x="121" y="312" fill="black" font-size="12"  transform="">-11</text>
-<text x="96" y="312" fill="black" font-size="12"  transform="">-12</text>
 <text x="412" y="279" fill="black" font-size="12"  transform="">1</text>
 <text x="412" y="254" fill="black" font-size="12"  transform="">2</text>
 <text x="412" y="229" fill="black" font-size="12"  transform="">3</text>
@@ -101,9 +95,6 @@
 <text x="412" y="129" fill="black" font-size="12"  transform="">7</text>
 <text x="412" y="104" fill="black" font-size="12"  transform="">8</text>
 <text x="412" y="79" fill="black" font-size="12"  transform="">9</text>
-<text x="412" y="54" fill="black" font-size="12"  transform="">10</text>
-<text x="412" y="29" fill="black" font-size="12"  transform="">11</text>
-<text x="412" y="4" fill="black" font-size="12"  transform="">12</text>
 <text x="408" y="329" fill="black" font-size="12"  transform="">-1</text>
 <text x="408" y="354" fill="black" font-size="12"  transform="">-2</text>
 <text x="408" y="379" fill="black" font-size="12"  transform="">-3</text>
@@ -113,10 +104,7 @@
 <text x="408" y="479" fill="black" font-size="12"  transform="">-7</text>
 <text x="408" y="504" fill="black" font-size="12"  transform="">-8</text>
 <text x="408" y="529" fill="black" font-size="12"  transform="">-9</text>
-<text x="408" y="554" fill="black" font-size="12"  transform="">-10</text>
-<text x="408" y="579" fill="black" font-size="12"  transform="">-11</text>
-<text x="408" y="604" fill="black" font-size="12"  transform="">-12</text>
-<text x="702" y="304" fill="black" font-size="12"  transform="">> x</text>
-<text x="397" y="0" fill="black" font-size="12"  transform="">^</text>
-<text x="397" y="-12" fill="black" font-size="12"  transform="">y</text>
+<text x="627" y="304" fill="black" font-size="12"  transform="">> x</text>
+<text x="397" y="75" fill="black" font-size="12"  transform="">^</text>
+<text x="397" y="63" fill="black" font-size="12"  transform="">y</text>
 </svg>

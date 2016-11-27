@@ -30,6 +30,16 @@ double y_svg2mat(int y_svg) {
    return Y_MIN + y_svg * y_diff/SVG_HEIGHT;
 }
 
+// Nimmt den Abstand entlang der x-Achse in Box Einheiten
+int x_mat2svg(double x_coord) {
+   return X_MIN + x_coord * BOX;   
+}
+
+// Nimmt den Abstan entlang der y-Achse in Box Einheiten
+int y_mat2svg(double y_coord) {
+   return Y_MAX + y_coord * BOX; 
+}
+
 // Zeichnet die einzelnen kästchen.
 void draw_background(FILE *svg) {
    for(int i=0; i<SVG_WIDTH;i+=BOX) {
