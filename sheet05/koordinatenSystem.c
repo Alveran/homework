@@ -4,10 +4,12 @@
 // Vorgaben der jetzigen Aufgaben.
 #define SVG_WIDTH 800
 #define SVG_HEIGHT 600
-#define X_MIN (SVG_HEIGHT/2)
-#define X_MAX
-#define Y_MIN
-#define Y_MAX (SVG_WIDTH/2) 
+
+#define X_MIN SVG_HEIGHT/2
+#define X_MAX SVG_WIDTH
+
+#define Y_MIN SVG_HEIGHT
+#define Y_MAX SVG_WIDTH/2
 
 // Die Grösse eines Kästchens in Pixeln
 #define BOX 25
@@ -19,11 +21,13 @@
 char *colour = "black";
 
 double x_svg2mat(int x_svg) {
-   return X_MIN + (x_svg * (X_MAX-X_MIN))/SVG_WIDTH;
+   int x_diff = X_MAX-X_MIN;
+   return X_MIN + x_svg * x_diff/SVG_WIDTH;
 }
 
 double y_svg2mat(int y_svg) {
-   return 1.0;
+   int y_diff = Y_MAX - Y_MIN;
+   return Y_MIN + y_svg * y_diff/SVG_HEIGHT;
 }
 
 // Zeichnet die einzelnen kästchen.
