@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "libSVG.h"
 
+// Vorgaben der jetzigen Aufgaben.
 #define SVG_WIDTH 800
 #define SVG_HEIGHT 600
 #define X_MIN (SVG_HEIGHT/2)
@@ -8,8 +9,11 @@
 #define Y_MIN
 #define Y_MAX (SVG_WIDTH/2) 
 
+// Die Grösse eines Kästchens in Pixeln
 #define BOX 25
+// Textgrösse für Ziffern
 #define TEXT_SIZE 12
+// Breite der gezeichneten Linien
 #define LINE_SVG_WIDTH 1
 
 char *colour = "black";
@@ -22,6 +26,7 @@ double y_svg2mat(int y_svg) {
    return 1.0;
 }
 
+// Zeichnet die einzelnen kästchen.
 void draw_background(FILE *svg) {
    for(int i=0; i<SVG_WIDTH;i+=BOX) {
       svg_line(svg, i, 0, i, SVG_HEIGHT, "lightgrey", LINE_SVG_WIDTH);
@@ -31,6 +36,8 @@ void draw_background(FILE *svg) {
    }
 }
 
+// Zeichnet die jeweilgen Achsen ausgehend von der Mitte nach aussen. 
+// Hier steckt die Hauptarbeit drin, da wir nun andere Werte haben müssen.
 void draw_coordinateLines(FILE *svg, int value, int center_x, int center_y) {
    int below_y = center_y - (value * BOX);
    int above_y = center_y + (value * BOX);
@@ -43,6 +50,7 @@ void draw_coordinateLines(FILE *svg, int value, int center_x, int center_y) {
    svg_line(svg, center_x, center_y, above_x, center_y, colour, LINE_SVG_WIDTH); 
 }
 
+// Zeichnet die Nummern entlang der x-koordinate
 void draw_x_numbers(FILE *svg, int value, int center_x, int center_y) {
    for(int i=1; i<=value; i++) {
       char value_to_string[8];
@@ -56,6 +64,7 @@ void draw_x_numbers(FILE *svg, int value, int center_x, int center_y) {
    }
 }
 
+// Zeichnet die Ziffern entlang der y koordinate
 void draw_y_numbers(FILE *svg, int value, int center_x, int center_y) {
    for(int i=1; i<=value; i++) {
       char value_to_string[8];
@@ -69,11 +78,14 @@ void draw_y_numbers(FILE *svg, int value, int center_x, int center_y) {
    }
 }
 
+// This is where the magic happens
 int main(int argc, char *argv[]) {
+   // Damit man parameter beim Aufruf des Programms mitgeben kann
+   // z.B. aufg2.exe 5, wobei die 5 die Größe des Koordinaten-Systems ist.
    char *endptr;
    int value;
    if (argc < 2) {
-      printf("Usage: %s byte", argv[0]);
+      printf("Usage: %s byte(Angabe der Länge der Achsen)\n", argv[0]);
       return 1;
    } else {
       value = strtol(argv[1], &endptr, 10); 
@@ -85,10 +97,13 @@ int main(int argc, char *argv[]) {
    int center_x = SVG_WIDTH / 2;
    int center_y = SVG_HEIGHT / 2;
 
+   // siehe Funktionsdokumentation
    draw_background(svg);
    draw_coordinateLines(svg, value, center_x, center_y);
    draw_x_numbers(svg, value, center_x, center_y);
    draw_y_numbers(svg, value, center_x, center_y);
+
+   // Ab hier nur noch die enden der jeweiligen Achsen, also > x und ^ y.
    svg_text(svg, center_x + value * BOX + 2, center_y + TEXT_SIZE/3, colour, TEXT_SIZE, "", "> x");
    svg_text(svg, center_x - TEXT_SIZE/4, center_y - value * BOX, colour, TEXT_SIZE, "", "^");
    svg_text(svg, center_x - TEXT_SIZE/4, center_y - value * BOX - TEXT_SIZE, colour, TEXT_SIZE, "", "y");
