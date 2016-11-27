@@ -8,83 +8,123 @@
      height="600">
 
 <rect x="0" y="0" width="800" height="600" stroke="black" stroke-width="10" fill="white" />
-<line x1="0" y1="0" x2="0" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="25" y1="0" x2="25" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="50" y1="0" x2="50" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="75" y1="0" x2="75" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="100" y1="0" x2="100" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="125" y1="0" x2="125" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="150" y1="0" x2="150" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="175" y1="0" x2="175" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="200" y1="0" x2="200" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="225" y1="0" x2="225" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="250" y1="0" x2="250" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="275" y1="0" x2="275" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="300" y1="0" x2="300" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="325" y1="0" x2="325" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="350" y1="0" x2="350" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="375" y1="0" x2="375" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="400" y1="0" x2="400" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="425" y1="0" x2="425" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="450" y1="0" x2="450" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="475" y1="0" x2="475" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="500" y1="0" x2="500" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="525" y1="0" x2="525" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="550" y1="0" x2="550" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="575" y1="0" x2="575" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="600" y1="0" x2="600" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="625" y1="0" x2="625" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="650" y1="0" x2="650" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="675" y1="0" x2="675" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="700" y1="0" x2="700" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="725" y1="0" x2="725" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="750" y1="0" x2="750" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="775" y1="0" x2="775" y2="600" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="0" x2="800" y2="0" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="25" x2="800" y2="25" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="50" x2="800" y2="50" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="75" x2="800" y2="75" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="100" x2="800" y2="100" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="125" x2="800" y2="125" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="150" x2="800" y2="150" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="175" x2="800" y2="175" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="200" x2="800" y2="200" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="225" x2="800" y2="225" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="250" x2="800" y2="250" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="275" x2="800" y2="275" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="300" x2="800" y2="300" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="325" x2="800" y2="325" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="350" x2="800" y2="350" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="375" x2="800" y2="375" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="400" x2="800" y2="400" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="425" x2="800" y2="425" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="450" x2="800" y2="450" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="475" x2="800" y2="475" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="500" x2="800" y2="500" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="525" x2="800" y2="525" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="550" x2="800" y2="550" stroke="lightgrey" stroke-width="1" />
-<line x1="0" y1="575" x2="800" y2="575" stroke="lightgrey" stroke-width="1" />
-<line x1="400" y1="300" x2="400" y2="250" stroke="black" stroke-width="1" />
-<line x1="400" y1="300" x2="400" y2="400" stroke="black" stroke-width="1" />
-<line x1="400" y1="300" x2="350" y2="300" stroke="black" stroke-width="1" />
-<line x1="400" y1="300" x2="625" y2="300" stroke="black" stroke-width="1" />
-<text x="422" y="312" fill="black" font-size="12"  transform="">1</text>
-<text x="447" y="312" fill="black" font-size="12"  transform="">2</text>
-<text x="472" y="312" fill="black" font-size="12"  transform="">3</text>
-<text x="497" y="312" fill="black" font-size="12"  transform="">4</text>
-<text x="522" y="312" fill="black" font-size="12"  transform="">5</text>
-<text x="547" y="312" fill="black" font-size="12"  transform="">6</text>
-<text x="572" y="312" fill="black" font-size="12"  transform="">7</text>
-<text x="597" y="312" fill="black" font-size="12"  transform="">8</text>
-<text x="622" y="312" fill="black" font-size="12"  transform="">9</text>
-<text x="371" y="312" fill="black" font-size="12"  transform="">-1</text>
-<text x="346" y="312" fill="black" font-size="12"  transform="">-2</text>
-<text x="412" y="279" fill="black" font-size="12"  transform="">1</text>
-<text x="412" y="254" fill="black" font-size="12"  transform="">2</text>
-<text x="408" y="329" fill="black" font-size="12"  transform="">-1</text>
-<text x="408" y="354" fill="black" font-size="12"  transform="">-2</text>
-<text x="408" y="379" fill="black" font-size="12"  transform="">-3</text>
-<text x="627" y="304" fill="black" font-size="12"  transform="">> x</text>
-<text x="397" y="250" fill="black" font-size="12"  transform="">^</text>
-<text x="397" y="238" fill="black" font-size="12"  transform="">y</text>
+<line x1="0" y1="0" x2="0" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="20" y1="0" x2="20" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="40" y1="0" x2="40" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="60" y1="0" x2="60" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="80" y1="0" x2="80" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="100" y1="0" x2="100" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="120" y1="0" x2="120" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="140" y1="0" x2="140" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="160" y1="0" x2="160" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="180" y1="0" x2="180" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="200" y1="0" x2="200" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="220" y1="0" x2="220" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="240" y1="0" x2="240" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="260" y1="0" x2="260" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="280" y1="0" x2="280" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="300" y1="0" x2="300" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="320" y1="0" x2="320" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="340" y1="0" x2="340" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="360" y1="0" x2="360" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="380" y1="0" x2="380" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="400" y1="0" x2="400" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="420" y1="0" x2="420" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="440" y1="0" x2="440" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="460" y1="0" x2="460" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="480" y1="0" x2="480" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="500" y1="0" x2="500" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="520" y1="0" x2="520" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="540" y1="0" x2="540" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="560" y1="0" x2="560" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="580" y1="0" x2="580" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="600" y1="0" x2="600" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="620" y1="0" x2="620" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="640" y1="0" x2="640" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="660" y1="0" x2="660" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="680" y1="0" x2="680" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="700" y1="0" x2="700" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="720" y1="0" x2="720" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="740" y1="0" x2="740" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="760" y1="0" x2="760" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="780" y1="0" x2="780" y2="600" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="0" x2="800" y2="0" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="20" x2="800" y2="20" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="40" x2="800" y2="40" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="60" x2="800" y2="60" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="80" x2="800" y2="80" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="100" x2="800" y2="100" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="120" x2="800" y2="120" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="140" x2="800" y2="140" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="160" x2="800" y2="160" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="180" x2="800" y2="180" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="200" x2="800" y2="200" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="220" x2="800" y2="220" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="240" x2="800" y2="240" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="260" x2="800" y2="260" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="280" x2="800" y2="280" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="300" x2="800" y2="300" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="320" x2="800" y2="320" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="340" x2="800" y2="340" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="360" x2="800" y2="360" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="380" x2="800" y2="380" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="400" x2="800" y2="400" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="420" x2="800" y2="420" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="440" x2="800" y2="440" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="460" x2="800" y2="460" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="480" x2="800" y2="480" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="500" x2="800" y2="500" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="520" x2="800" y2="520" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="540" x2="800" y2="540" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="560" x2="800" y2="560" stroke="lightgrey" stroke-width="2" />
+<line x1="0" y1="580" x2="800" y2="580" stroke="lightgrey" stroke-width="2" />
+<line x1="400" y1="300" x2="400" y2="160" stroke="black" stroke-width="2" />
+<line x1="400" y1="300" x2="400" y2="500" stroke="black" stroke-width="2" />
+<line x1="400" y1="300" x2="300" y2="300" stroke="black" stroke-width="2" />
+<line x1="400" y1="300" x2="580" y2="300" stroke="black" stroke-width="2" />
+<text x="417" y="310" fill="black" font-size="12"  transform="">1</text>
+<text x="437" y="310" fill="black" font-size="12"  transform="">2</text>
+<text x="457" y="310" fill="black" font-size="12"  transform="">3</text>
+<text x="477" y="310" fill="black" font-size="12"  transform="">4</text>
+<text x="497" y="310" fill="black" font-size="12"  transform="">5</text>
+<text x="517" y="310" fill="black" font-size="12"  transform="">6</text>
+<text x="537" y="310" fill="black" font-size="12"  transform="">7</text>
+<text x="557" y="310" fill="black" font-size="12"  transform="">8</text>
+<text x="577" y="310" fill="black" font-size="12"  transform="">9</text>
+<text x="376" y="310" fill="black" font-size="12"  transform="">-1</text>
+<text x="356" y="310" fill="black" font-size="12"  transform="">-2</text>
+<text x="336" y="310" fill="black" font-size="12"  transform="">-3</text>
+<text x="316" y="310" fill="black" font-size="12"  transform="">-4</text>
+<text x="296" y="310" fill="black" font-size="12"  transform="">-5</text>
+<text x="410" y="284" fill="black" font-size="12"  transform="">1</text>
+<text x="410" y="264" fill="black" font-size="12"  transform="">2</text>
+<text x="410" y="244" fill="black" font-size="12"  transform="">3</text>
+<text x="410" y="224" fill="black" font-size="12"  transform="">4</text>
+<text x="410" y="204" fill="black" font-size="12"  transform="">5</text>
+<text x="410" y="184" fill="black" font-size="12"  transform="">6</text>
+<text x="410" y="164" fill="black" font-size="12"  transform="">7</text>
+<text x="406" y="324" fill="black" font-size="12"  transform="">-1</text>
+<text x="406" y="344" fill="black" font-size="12"  transform="">-2</text>
+<text x="406" y="364" fill="black" font-size="12"  transform="">-3</text>
+<text x="406" y="384" fill="black" font-size="12"  transform="">-4</text>
+<text x="406" y="404" fill="black" font-size="12"  transform="">-5</text>
+<text x="406" y="424" fill="black" font-size="12"  transform="">-6</text>
+<text x="406" y="444" fill="black" font-size="12"  transform="">-7</text>
+<text x="406" y="464" fill="black" font-size="12"  transform="">-8</text>
+<text x="406" y="484" fill="black" font-size="12"  transform="">-9</text>
+<line x1="340" y1="299" x2="360" y2="297" stroke="red" stroke-width="2" />
+<text x="337" y="302" fill="red" font-size="12"  transform="">o</text>
+<line x1="360" y1="297" x2="380" y2="292" stroke="red" stroke-width="2" />
+<text x="357" y="300" fill="red" font-size="12"  transform="">o</text>
+<line x1="380" y1="292" x2="400" y2="280" stroke="red" stroke-width="2" />
+<text x="377" y="295" fill="red" font-size="12"  transform="">o</text>
+<line x1="400" y1="280" x2="420" y2="245" stroke="red" stroke-width="2" />
+<text x="397" y="283" fill="red" font-size="12"  transform="">o</text>
+<line x1="420" y1="245" x2="440" y2="152" stroke="red" stroke-width="2" />
+<text x="417" y="248" fill="red" font-size="12"  transform="">o</text>
+<line x1="440" y1="152" x2="460" y2="-101" stroke="red" stroke-width="2" />
+<text x="437" y="155" fill="red" font-size="12"  transform="">o</text>
+<text x="582" y="304" fill="black" font-size="12"  transform="">> x</text>
+<text x="397" y="160" fill="black" font-size="12"  transform="">^</text>
+<text x="397" y="148" fill="black" font-size="12"  transform="">y</text>
 </svg>

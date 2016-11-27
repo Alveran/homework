@@ -1,24 +1,26 @@
 #include <stdio.h>
 #include "libSVG.h"
+#include <math.h>
 
 // Vorgaben der jetzigen Aufgaben.
 #define SVG_WIDTH 800
 #define SVG_HEIGHT 600
 
-#define X_MIN 2
+#define X_MIN 5
 #define X_MAX 9
 
-#define Y_MIN 2
-#define Y_MAX 3
+#define Y_MIN 7
+#define Y_MAX 9
 
 // Die Grösse eines Kästchens in Pixeln
-#define BOX 25
+#define BOX 20
 // Textgrösse für Ziffern
 #define TEXT_SIZE 12
 // Breite der gezeichneten Linien
-#define LINE_SVG_WIDTH 1
+#define LINE_SVG_WIDTH 2
 
 char *colour = "black";
+char *line_colour = "red";
 
 double x_svg2mat(int x_svg) {
    int x_diff = X_MAX-X_MIN;
@@ -27,17 +29,17 @@ double x_svg2mat(int x_svg) {
 
 double y_svg2mat(int y_svg) {
    int y_diff = Y_MAX - Y_MIN;
-   return Y_MIN + y_svg * y_diff/SVG_HEIGHT;
+   return Y_MIN - y_svg * y_diff/SVG_HEIGHT;
 }
 
 // Nimmt den Abstand entlang der x-Achse in Box Einheiten
 int x_mat2svg(double x_coord) {
-   return X_MIN + x_coord * BOX;   
+   return SVG_WIDTH/2 + x_coord * BOX;   
 }
 
 // Nimmt den Abstan entlang der y-Achse in Box Einheiten
 int y_mat2svg(double y_coord) {
-   return Y_MAX + y_coord * BOX; 
+   return SVG_HEIGHT/2 - y_coord * BOX; 
 }
 
 // Zeichnet die einzelnen kästchen.
@@ -92,6 +94,14 @@ void draw_y_numbers(FILE *svg, int center_x, int center_y) {
    }
 }
 
+// Lösung der Aufgabe fünf mit eigener Pow Lösung, kann allerdings eigentlich jede Math function ersetzt werden.
+void draw_functions(FILE *svg, int start, int end) {
+   for (int i = start; i<end; i++) {
+      svg_line(svg, x_mat2svg(i), y_mat2svg(exp(i)), x_mat2svg(i+1), y_mat2svg(exp(i+1)) , line_colour, LINE_SVG_WIDTH); 
+      svg_text(svg, x_mat2svg(i)-3, y_mat2svg(exp(i))+3, line_colour, TEXT_SIZE, "", "o");
+   }
+}
+
 // This is where the magic happens
 int main() {
    // creates file
@@ -106,6 +116,8 @@ int main() {
    draw_coordinateLines(svg, center_x, center_y);
    draw_x_numbers(svg, center_x, center_y);
    draw_y_numbers(svg, center_x, center_y);
+   
+   draw_functions(svg, -3, 3);
 
    // Ab hier nur noch die enden der jeweiligen Achsen, also > x und ^ y.
    svg_text(svg, center_x + X_MAX * BOX + 2, center_y + TEXT_SIZE/3, colour, TEXT_SIZE, "", "> x");
