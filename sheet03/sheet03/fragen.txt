@@ -1,0 +1,2 @@
+./koordinatenSystem &2
+// Wieso prueft strtol das nicht

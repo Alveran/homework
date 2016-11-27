@@ -1,0 +1,6 @@
+interesting is that the numbers are always represented as binary values and handled as those.
+
+so a = a * 2 is like a left shift.
+a = 2 << a
+
+john carmack fast inverse square root.
