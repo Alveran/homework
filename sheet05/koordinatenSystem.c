@@ -5,11 +5,11 @@
 #define SVG_WIDTH 800
 #define SVG_HEIGHT 600
 
-#define X_MIN SVG_HEIGHT/2
-#define X_MAX SVG_WIDTH
+#define X_MIN 2
+#define X_MAX 9
 
-#define Y_MIN SVG_HEIGHT
-#define Y_MAX SVG_WIDTH/2
+#define Y_MIN 2
+#define Y_MAX 3
 
 // Die Grösse eines Kästchens in Pixeln
 #define BOX 25
@@ -52,11 +52,11 @@ void draw_background(FILE *svg) {
 
 // Zeichnet die jeweilgen Achsen ausgehend von der Mitte nach aussen. 
 // Hier steckt die Hauptarbeit drin, da wir nun andere Werte haben müssen.
-void draw_coordinateLines(FILE *svg, int value, int center_x, int center_y) {
-   int below_y = center_y - (value * BOX);
-   int above_y = center_y + (value * BOX);
-   int below_x = center_x - (value * BOX);
-   int above_x = center_x + (value * BOX);
+void draw_coordinateLines(FILE *svg, int center_x, int center_y) {
+   int below_y = center_y - (Y_MIN * BOX);
+   int above_y = center_y + (Y_MAX * BOX + BOX);
+   int below_x = center_x - (X_MIN * BOX);
+   int above_x = center_x + (X_MAX * BOX);
 
    svg_line(svg, center_x, center_y, center_x, below_y, colour, LINE_SVG_WIDTH); 
    svg_line(svg, center_x, center_y, center_x, above_y, colour, LINE_SVG_WIDTH); 
@@ -65,13 +65,13 @@ void draw_coordinateLines(FILE *svg, int value, int center_x, int center_y) {
 }
 
 // Zeichnet die Nummern entlang der x-koordinate
-void draw_x_numbers(FILE *svg, int value, int center_x, int center_y) {
-   for(int i=1; i<=value; i++) {
+void draw_x_numbers(FILE *svg, int center_x, int center_y) {
+   for(int i=1; i<=X_MAX; i++) {
       char value_to_string[8];
       sprintf(value_to_string, "%d", i);
       svg_text(svg, center_x + i*BOX-TEXT_SIZE/4, center_y + BOX/2, colour, TEXT_SIZE, "", value_to_string);
    }
-   for(int i=1; i<=value; i++) {
+   for(int i=1; i<=X_MIN; i++) {
       char value_to_string[8];
       sprintf(value_to_string, "-%d", i);
       svg_text(svg, center_x - i*BOX-TEXT_SIZE/3, center_y + BOX/2, colour, TEXT_SIZE, "", value_to_string);
@@ -79,13 +79,13 @@ void draw_x_numbers(FILE *svg, int value, int center_x, int center_y) {
 }
 
 // Zeichnet die Ziffern entlang der y koordinate
-void draw_y_numbers(FILE *svg, int value, int center_x, int center_y) {
-   for(int i=1; i<=value; i++) {
+void draw_y_numbers(FILE *svg, int center_x, int center_y) {
+   for(int i=1; i<=Y_MIN; i++) {
       char value_to_string[8];
       sprintf(value_to_string, "%d", i);
       svg_text(svg, center_x+BOX/2, center_y - i*BOX+TEXT_SIZE/3, colour, TEXT_SIZE, "", value_to_string);
    }
-   for(int i=1; i<=value; i++) {
+   for(int i=1; i<=Y_MAX; i++) {
       char value_to_string[8];
       sprintf(value_to_string, "-%d", i);
       svg_text(svg, center_x+BOX/3, center_y + i*BOX+TEXT_SIZE/3, colour, TEXT_SIZE, "", value_to_string);
@@ -93,17 +93,7 @@ void draw_y_numbers(FILE *svg, int value, int center_x, int center_y) {
 }
 
 // This is where the magic happens
-int main(int argc, char *argv[]) {
-   // Damit man parameter beim Aufruf des Programms mitgeben kann
-   // z.B. aufg2.exe 5, wobei die 5 die Größe des Koordinaten-Systems ist.
-   char *endptr;
-   int value;
-   if (argc < 2) {
-      printf("Usage: %s byte(Angabe der Länge der Achsen)\n", argv[0]);
-      return 1;
-   } else {
-      value = strtol(argv[1], &endptr, 10); 
-   }
+int main() {
    // creates file
    FILE *svg = svg_create("KoordinatenSystem.svg", SVG_WIDTH, SVG_HEIGHT);
    // Draws canvas
@@ -113,14 +103,14 @@ int main(int argc, char *argv[]) {
 
    // siehe Funktionsdokumentation
    draw_background(svg);
-   draw_coordinateLines(svg, value, center_x, center_y);
-   draw_x_numbers(svg, value, center_x, center_y);
-   draw_y_numbers(svg, value, center_x, center_y);
+   draw_coordinateLines(svg, center_x, center_y);
+   draw_x_numbers(svg, center_x, center_y);
+   draw_y_numbers(svg, center_x, center_y);
 
    // Ab hier nur noch die enden der jeweiligen Achsen, also > x und ^ y.
-   svg_text(svg, center_x + value * BOX + 2, center_y + TEXT_SIZE/3, colour, TEXT_SIZE, "", "> x");
-   svg_text(svg, center_x - TEXT_SIZE/4, center_y - value * BOX, colour, TEXT_SIZE, "", "^");
-   svg_text(svg, center_x - TEXT_SIZE/4, center_y - value * BOX - TEXT_SIZE, colour, TEXT_SIZE, "", "y");
+   svg_text(svg, center_x + X_MAX * BOX + 2, center_y + TEXT_SIZE/3, colour, TEXT_SIZE, "", "> x");
+   svg_text(svg, center_x - TEXT_SIZE/4, center_y - Y_MIN * BOX, colour, TEXT_SIZE, "", "^");
+   svg_text(svg, center_x - TEXT_SIZE/4, center_y - Y_MIN * BOX - TEXT_SIZE, colour, TEXT_SIZE, "", "y");
 
    svg_finish(svg); 
 }
