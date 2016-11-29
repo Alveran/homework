@@ -10,11 +10,11 @@ int columnHeight(int height) {
 }
 
 void printRight() {
-   printf("> x \n"); 
+   printf("> x \n");
 }
 
 // brauchen wir um die Zahlen an der Y achse richtig dar
-// zustellen. 32 ist das char space und positive Zifferen 
+// zustellen. 32 ist das char space und positive Zifferen
 // sollen mit fuehrendem Leerzeichen dargestellt werden.
 void printNumbersY(int currentN) {
    if (currentN > 0 && currentN < 32) {
@@ -74,7 +74,7 @@ void printNumberRow(int N, char centerY) {
      putchar(minus);
      printf("%d", tempN);
      putchar(space);
-     tempN--; 
+     tempN--;
    } while(tempN > 0);
    putchar(space);
    putchar(centerY);
@@ -103,7 +103,7 @@ int main(int argc, char *argv[]){
    }
 
    int N = getCoordinateSystemSize(argv[1]);
-
+// This is a test
    int width = rowWidth(N);
    int height = columnHeight(N);
    int yPositionCounter = 2;
@@ -115,7 +115,7 @@ int main(int argc, char *argv[]){
    int tempN = N;
 
    printTop(width);
-   do { 
+   do {
       // Koennte man ab hier nochmal refactorn
       do
       {
