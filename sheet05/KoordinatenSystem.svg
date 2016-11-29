@@ -112,18 +112,26 @@
 <text x="406" y="444" fill="black" font-size="12"  transform="">-7</text>
 <text x="406" y="464" fill="black" font-size="12"  transform="">-8</text>
 <text x="406" y="484" fill="black" font-size="12"  transform="">-9</text>
-<line x1="340" y1="299" x2="360" y2="297" stroke="red" stroke-width="2" />
-<text x="337" y="302" fill="red" font-size="12"  transform="">o</text>
-<line x1="360" y1="297" x2="380" y2="292" stroke="red" stroke-width="2" />
-<text x="357" y="300" fill="red" font-size="12"  transform="">o</text>
-<line x1="380" y1="292" x2="400" y2="280" stroke="red" stroke-width="2" />
-<text x="377" y="295" fill="red" font-size="12"  transform="">o</text>
-<line x1="400" y1="280" x2="420" y2="245" stroke="red" stroke-width="2" />
-<text x="397" y="283" fill="red" font-size="12"  transform="">o</text>
-<line x1="420" y1="245" x2="440" y2="152" stroke="red" stroke-width="2" />
-<text x="417" y="248" fill="red" font-size="12"  transform="">o</text>
-<line x1="440" y1="152" x2="460" y2="-101" stroke="red" stroke-width="2" />
-<text x="437" y="155" fill="red" font-size="12"  transform="">o</text>
+<line x1="300" y1="-2147483648" x2="320" y2="-2147483648" stroke="red" stroke-width="2" />
+<text x="297" y="-2147483645" fill="red" font-size="12"  transform="">o</text>
+<line x1="320" y1="-2147483648" x2="340" y2="-2147483648" stroke="red" stroke-width="2" />
+<text x="317" y="-2147483645" fill="red" font-size="12"  transform="">o</text>
+<line x1="340" y1="-2147483648" x2="360" y2="-2147483648" stroke="red" stroke-width="2" />
+<text x="337" y="-2147483645" fill="red" font-size="12"  transform="">o</text>
+<line x1="360" y1="-2147483648" x2="380" y2="-2147483648" stroke="red" stroke-width="2" />
+<text x="357" y="-2147483645" fill="red" font-size="12"  transform="">o</text>
+<line x1="380" y1="-2147483648" x2="400" y2="-2147483648" stroke="red" stroke-width="2" />
+<text x="377" y="-2147483645" fill="red" font-size="12"  transform="">o</text>
+<line x1="400" y1="-2147483648" x2="420" y2="280" stroke="red" stroke-width="2" />
+<text x="397" y="-2147483645" fill="red" font-size="12"  transform="">o</text>
+<line x1="420" y1="280" x2="440" y2="280" stroke="red" stroke-width="2" />
+<text x="417" y="283" fill="red" font-size="12"  transform="">o</text>
+<line x1="440" y1="280" x2="460" y2="260" stroke="red" stroke-width="2" />
+<text x="437" y="283" fill="red" font-size="12"  transform="">o</text>
+<line x1="460" y1="260" x2="480" y2="180" stroke="red" stroke-width="2" />
+<text x="457" y="263" fill="red" font-size="12"  transform="">o</text>
+<line x1="480" y1="180" x2="500" y2="-180" stroke="red" stroke-width="2" />
+<text x="477" y="183" fill="red" font-size="12"  transform="">o</text>
 <text x="582" y="304" fill="black" font-size="12"  transform="">> x</text>
 <text x="397" y="160" fill="black" font-size="12"  transform="">^</text>
 <text x="397" y="148" fill="black" font-size="12"  transform="">y</text>

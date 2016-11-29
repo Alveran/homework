@@ -97,8 +97,8 @@ void draw_y_numbers(FILE *svg, int center_x, int center_y) {
 // Lösung der Aufgabe fünf mit eigener Pow Lösung, kann allerdings eigentlich jede Math function ersetzt werden.
 void draw_functions(FILE *svg, int start, int end) {
    for (int i = start; i<end; i++) {
-      svg_line(svg, x_mat2svg(i), y_mat2svg(exp(i)), x_mat2svg(i+1), y_mat2svg(exp(i+1)) , line_colour, LINE_SVG_WIDTH); 
-      svg_text(svg, x_mat2svg(i)-3, y_mat2svg(exp(i))+3, line_colour, TEXT_SIZE, "", "o");
+      svg_line(svg, x_mat2svg(i), y_mat2svg(tgamma(i)), x_mat2svg(i+1), y_mat2svg(tgamma(i+1)) , line_colour, LINE_SVG_WIDTH); 
+      svg_text(svg, x_mat2svg(i)-3, y_mat2svg(tgamma(i))+3, line_colour, TEXT_SIZE, "", "o");
    }
 }
 
@@ -117,7 +117,7 @@ int main() {
    draw_x_numbers(svg, center_x, center_y);
    draw_y_numbers(svg, center_x, center_y);
    
-   draw_functions(svg, -3, 3);
+   draw_functions(svg, -5, 5);
 
    // Ab hier nur noch die enden der jeweiligen Achsen, also > x und ^ y.
    svg_text(svg, center_x + X_MAX * BOX + 2, center_y + TEXT_SIZE/3, colour, TEXT_SIZE, "", "> x");
