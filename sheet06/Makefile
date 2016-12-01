@@ -9,5 +9,5 @@ all: run
 	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
 
 run: aufg13.exe
-	./aufg13.exe
+	./aufg13.exe 100 100
 
