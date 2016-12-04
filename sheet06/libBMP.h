@@ -55,15 +55,39 @@ int err = dx+dy, e2; /* error value e_xy */
    }
 }
 
+void bmp_ellipse(uint32_t * data, int width, int xm, int ym, int a, int b, uint32_t color)
+{
+   int dx = 0, dy = b; /* im I. Quadranten von links oben nach rechts unten */
+   long a2 = a*a, b2 = b*b;
+   long err = b2-(2*b-1)*a2, e2; /* Fehler im 1. Schritt */
+
+   do {
+      bmp_set_pixel(data, width, xm+dx, ym+dy, color); /* I. Quadrant */
+      bmp_set_pixel(data, width, xm-dx, ym+dy, color); /* II. Quadrant */
+      bmp_set_pixel(data, width, xm-dx, ym-dy, color); /* III. Quadrant */
+      bmp_set_pixel(data, width, xm+dx, ym-dy, color); /* IV. Quadrant */
+
+     e2 = 2*err;
+     if (e2 <  (2*dx+1)*b2) { dx++; err += (2*dx+1)*b2; }
+     if (e2 > -(2*dy-1)*a2) { dy--; err -= (2*dy-1)*a2; }
+   } while (dy >= 0);
+
+   while (dx++ < a) { /* fehlerhafter Abbruch bei flachen Ellipsen (b=1) */
+         bmp_set_pixel(data, width, xm+dx, ym, color); /* -> Spitze der Ellipse vollenden */
+         bmp_set_pixel(data, width, xm-dx, ym, color);
+   }
+}
+
+
 /**
- * Schreibt die N letzten Bytes eines 64-bit Integers in ein BMP Bild.
- * Das am wenigsten signifikante Byte (LSB) wird zuerst geschrieben.
- * (Little Endian).
- *
- * bmp - Zeiger auf das bmp Bild
- * byte - Byte-Muster.
- * N - Anzahl der zu schreibenden Bytes (N <= 8).
- */
+* Schreibt die N letzten Bytes eines 64-bit Integers in ein BMP Bild.
+* Das am wenigsten signifikante Byte (LSB) wird zuerst geschrieben.
+* (Little Endian).
+*
+* bmp - Zeiger auf das bmp Bild
+* byte - Byte-Muster.
+* N - Anzahl der zu schreibenden Bytes (N <= 8).
+*/
 void bmp_write_N_byte(FILE * bmp, uint64_t byte, int N) {
   for (int i = 0; ((i < N) && (i < 8)); i++) {
     fputc(byte % 256, bmp);
