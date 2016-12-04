@@ -19,16 +19,21 @@
 int main(int argc, char *argv[]) {
   // Vordefinierte Farben
   uint32_t colors[] = { BLACK, WHITE, RED, GREEN, BLUE };
-
+  
   int bmp_height = -1;
   int bmp_width = -1;
-
+   
+  if (argc < 3 || argc > 3) {
+   printf("Usage: %s (Height) (Width)\n", argv[0]);
+   return 1;
+  }
   sscanf(argv[1], "%d", &bmp_height);
   sscanf(argv[2], "%d", &bmp_width);
   printf("Hoehe %d und Breite %d wurden angegeben.\n", bmp_height, bmp_width);
 
   // Generiere Daten reserviere genug Speicher für das Bild
-  uint32_t *data = malloc(sizeof(bmp_height*bmp_width)); 
+  int area = bmp_height * bmp_width;
+  uint32_t *data = malloc(area * sizeof(uint32_t));
 
   // Random
   srand(time(NULL));
@@ -39,7 +44,7 @@ int main(int argc, char *argv[]) {
   }
 
   // bmpCreate 
-  bmp_create("Random_Bild", data, bmp_width, bmp_height);
+  bmp_create("zufall.bmp", data, bmp_width, bmp_height);
 
   // freigabe der Ressourcen
   free(data);

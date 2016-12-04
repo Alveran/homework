@@ -24,7 +24,7 @@
  */
 void bmp_set_pixel(uint32_t * data, int width, int height, int x, int y,
                    uint32_t color) {
-  // TODO: implementieren!
+   data[y * width + x] = color;
 }
 
 
@@ -44,8 +44,6 @@ void bmp_write_N_byte(FILE * bmp, uint64_t byte, int N) {
     byte /= 256;
   }
 }
-
-
 
 /**
  * Erstellt einen BMP-File-Header, insgesamt 14 Byte.
@@ -106,8 +104,6 @@ void bitmap_info_header(FILE * bmp, int width, int height) {
   // (4 Byte, uint32_t) Anzahl wichtiger Farben; 0 bedeutet alle sind wichtig.
   bmp_write_N_byte(bmp, 0, 4);
 }
-
-
 
 /**
  * Erstellt ein BMP Bild.
