@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
   srand(time(NULL));
   for (int y = 0; y < bmp_height; y++) {
     for (int x = 0; x < bmp_width; x++) {
-      bmp_set_pixel(data, bmp_width, bmp_height, x, y, colors[rand() % 5]);
+      bmp_set_pixel(data, bmp_width, x, y, colors[rand() % 5]);
     }
   }
 

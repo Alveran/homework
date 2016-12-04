@@ -22,7 +22,7 @@
  * y - Y-Koordinate im BMP.
  * color - Pixelfarbe.
  */
-void bmp_set_pixel(uint32_t * data, int width, int height, int x, int y, uint32_t color) {
+void bmp_set_pixel(uint32_t * data, int width, int x, int y, uint32_t color) {
    data[y * width + x] = color;
 }
 
@@ -31,11 +31,11 @@ void bmp_rect(uint32_t * data, uint32_t red, uint32_t white) {
    for(int y = 0; y < width; y++) {
      for(int x = 0; x < width; x++) {
         if (y == 0 || y==width-1) { 
-           bmp_set_pixel(data, width, width, x, y, red);
+           bmp_set_pixel(data, width, x, y, red);
         } else if (x==0 || x==width-1) {
-           bmp_set_pixel(data, width, width, x,y,red);
+           bmp_set_pixel(data, width, x,y,red);
         } else {
-           bmp_set_pixel(data, width, width, x, y, white);
+           bmp_set_pixel(data, width, x, y, white);
         }
      }
    }
