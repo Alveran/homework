@@ -22,12 +22,20 @@
  * y - Y-Koordinate im BMP.
  * color - Pixelfarbe.
  */
-void bmp_set_pixel(uint32_t * data, int width, int height, int x, int y,
-                   uint32_t color) {
+void bmp_set_pixel(uint32_t * data, int width, int height, int x, int y, uint32_t color) {
    data[y * width + x] = color;
 }
 
-
+void bmp_rect(uint32_t * data, uint32_t red, uint32_t white) {
+   int width = 1023;
+   for(int x = 0; x <= width; x++) {
+      for(int y = 1; y <= width; y++) {
+        bmp_set_pixel(data, width, width, x, y, white);
+      }
+      bmp_set_pixel(data, width, width, x, 0, red);
+      bmp_set_pixel(data, width, width, x, width, red);
+   }
+}
 
 /**
  * Schreibt die N letzten Bytes eines 64-bit Integers in ein BMP Bild.
