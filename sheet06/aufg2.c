@@ -27,6 +27,7 @@ int main() {
   uint32_t *data = malloc(area * sizeof(uint32_t));
 
   bmp_rect(data, RED, WHITE);
+  bmp_line(data, RED, bmp_width, 512, 700, 512, 278);
   bmp_create("zweite.bmp", data, bmp_width, bmp_height);
 
   // freigabe der Ressourcen
