@@ -1,0 +1,4 @@
+Read me
+Ein Vorschlag der nicht ganz funktioniert, aber etwas leichter verständlich ist, zumindest für mich.
+Finde den Fehler leider nicht, lässt sich ausführen, aber stürzt nach Eingabe der Werte ab.
+
