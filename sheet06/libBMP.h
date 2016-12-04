@@ -27,13 +27,17 @@ void bmp_set_pixel(uint32_t * data, int width, int height, int x, int y, uint32_
 }
 
 void bmp_rect(uint32_t * data, uint32_t red, uint32_t white) {
-   int width = 1023;
-   for(int x = 0; x <= width; x++) {
-      for(int y = 1; y <= width; y++) {
-        bmp_set_pixel(data, width, width, x, y, white);
-      }
-      bmp_set_pixel(data, width, width, x, 0, red);
-      bmp_set_pixel(data, width, width, x, width, red);
+   int width = 1024;
+   for(int y = 0; y < width; y++) {
+     for(int x = 0; x < width; x++) {
+        if (y == 0 || y==width-1) { 
+           bmp_set_pixel(data, width, width, x, y, red);
+        } else if (x==0 || x==width-1) {
+           bmp_set_pixel(data, width, width, x,y,red);
+        } else {
+           bmp_set_pixel(data, width, width, x, y, white);
+        }
+     }
    }
 }
 
