@@ -42,9 +42,9 @@ void bmp_rect(uint32_t * data, uint32_t red, uint32_t white) {
 }
 
 void bmp_line(uint32_t * data, uint32_t color, int width, int x0, int y0, int x1, int y1) {
-int dx =  abs(x1-x0), sx = x0<x1 ? 1 : -1;
-int dy = -abs(y1-y0), sy = y0<y1 ? 1 : -1;
-int err = dx+dy, e2; /* error value e_xy */
+   int dx =  abs(x1-x0), sx = x0<x1 ? 1 : -1;
+   int dy = -abs(y1-y0), sy = y0<y1 ? 1 : -1;
+   int err = dx+dy, e2; /* error value e_xy */
 
    while(1){
       bmp_set_pixel(data, width, x0,y0, color);
@@ -78,6 +78,14 @@ void bmp_ellipse(uint32_t * data, int width, int xm, int ym, int a, int b, uint3
    }
 }
 
+void bmp_triangle(uint32_t * data, uint32_t border_color, uint32_t bg_color,int width, int p1x, int p1y, int p2x, int p2y, int p3x, int p3y) {
+   // Kathete
+   bmp_line(data,border_color, width, p2x, p3x, p2y, p3y);
+   bmp_line(data,border_color, width, p1x, p3x, p1y, p3y);
+   for (int i = p1x; i < p2x; ++i) {
+      bmp_set_pixel(data, width, i, p1y+189, border_color);
+   }
+}
 
 /**
 * Schreibt die N letzten Bytes eines 64-bit Integers in ein BMP Bild.
