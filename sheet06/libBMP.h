@@ -79,10 +79,11 @@ void bmp_ellipse(uint32_t * data, int width, int xm, int ym, int a, int b, uint3
 }
 
 void bmp_triangle(uint32_t * data, uint32_t border_color, uint32_t bg_color,int width, int p1x, int p1y, int p2x, int p2y, int p3x, int p3y) {
-   // Kathete
+
    bmp_line(data,border_color, width, p2x, p3x, p2y, p3y);
    bmp_line(data,border_color, width, p1x, p3x, p1y, p3y);
    for (int i = p1x; i < p2x; ++i) {
+      bmp_line(data, bg_color, width, i, p3x, p1y, p3y);
       bmp_set_pixel(data, width, i, p1y+189, border_color);
    }
 }
