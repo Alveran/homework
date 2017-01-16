@@ -26,8 +26,7 @@ void bmp_set_pixel(uint32_t * data, int width, int x, int y, uint32_t color) {
    data[y * width + x] = color;
 }
 
-void bmp_rect(uint32_t * data, uint32_t red, uint32_t white) {
-   int width = 1024;
+void bmp_rect(uint32_t * data, uint32_t red, uint32_t white, int width) {
    for(int y = 0; y < width; y++) {
      for(int x = 0; x < width; x++) {
         if (y == 0 || y==width-1) { 
@@ -41,6 +40,7 @@ void bmp_rect(uint32_t * data, uint32_t red, uint32_t white) {
    }
 }
 
+// 
 void bmp_line(uint32_t * data, uint32_t color, int width, int x0, int y0, int x1, int y1) {
    int dx =  abs(x1-x0), sx = x0<x1 ? 1 : -1;
    int dy = -abs(y1-y0), sy = y0<y1 ? 1 : -1;

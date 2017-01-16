@@ -16,29 +16,37 @@
 #define GREEN 0x0000FF00
 #define BLUE  0x000000FF
 
-int main() {
+int main(int argc, char *argv[]) {
   // Vordefinierte Farben
   uint32_t colors[] = { BLACK, WHITE, RED, GREEN, BLUE };
-
+  
   int bmp_height = -1;
   int bmp_width = -1;
+   
+  if (argc < 3 || argc > 3) {
+   printf("Usage: %s (Height) (Width)\n", argv[0]);
+   return 1;
+  }
+  sscanf(argv[1], "%d", &bmp_height);
+  sscanf(argv[2], "%d", &bmp_width);
+  printf("Hoehe %d und Breite %d wurden angegeben.\n", bmp_height, bmp_width);
 
-  // TODO: Frage Benutzer nach Bildgroesse (bmp_height, bmp_width)
-
-  // Generiere Daten
-  uint32_t *data = NULL; // TODO: Speicher mit malloc reservieren
+  // Generiere Daten reserviere genug Speicher für das Bild
+  int area = bmp_height * bmp_width;
+  uint32_t *data = malloc(area * sizeof(uint32_t));
 
   // Random
   srand(time(NULL));
   for (int y = 0; y < bmp_height; y++) {
     for (int x = 0; x < bmp_width; x++) {
-      bmp_set_pixel(data, bmp_width, bmp_height, x, y, colors[rand() % 5]);
+      bmp_set_pixel(data, bmp_width, x, y, colors[rand() % 5]);
     }
   }
 
-  // TODO: Schreibe BMP Datei mit bmp_create
+  // bmpCreate 
+  bmp_create("zufall.bmp", data, bmp_width, bmp_height);
 
-  // TODO: Speicher data mit free freigeben
-
+  // freigabe der Ressourcen
+  free(data);
   return 0;
 }
